@@ -16,7 +16,7 @@ import {
 import NetworkMonitor from "./network";
 
 // @ts-ignore
-const WS = typeof global.WebSocket !== "undefined" ? global.WebSocket : require("ws");
+const WS = typeof globalThis.WebSocket !== "undefined" ? globalThis.WebSocket : require("ws");
 
 // -- SocketTransport ------------------------------------------------------ //
 
